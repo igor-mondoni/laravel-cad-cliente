@@ -62,3 +62,68 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+
+Como começar:
+
+primeiro tenha o composer instalado em sua maquina;
+Recomendo o POSTMAN ou INSOMNIA para os testes;
+
+-----console---------------------------------------------
+- git clone https://github.com/igor-mondoni/laravel-cad-cliente.git
+---------------------------------------------------------
+
+Acesse a pasta que foi gerada;
+
+-----console---------------------------------------------
+- composer install
+- php artisan serve
+---------------------------------------------------------
+
+Configure o .env para acessar um banco de dados valido
+
+-----console---------------------------------------------
+- php artisan migrate
+---------------------------------------------------------
+
+
+
+
+
+Rotas:
+
+Caso não configure um virtual host ou mude a porta, logo por default a rota principal será http://127.0.0.1:8000/api
+
+
+Listar todas as pessoas:
+GET - http://127.0.0.1:8000/api/index
+
+Criar uma pessoa:
+POST - http://127.0.0.1:8000/api/create
+campos: 
+nome (string).
+sobrenome (string).
+
+
+Listar uma pessoa em especifico:
+GET - http://127.0.0.1:8000/api/show/{id}
+id = id do registro da pessoa
+
+Atualizar o registro de uma pessoa:
+POST - http://127.0.0.1:8000/api/update/{id}
+id = id do registro da pessoa
+campos: 
+nome (string).
+sobrenome (string).
+
+
+Deletar o registro de uma pessoa:
+DELETE - http://127.0.0.1:8000/api/destroy/{id}
+id = id do registro da pessoa
